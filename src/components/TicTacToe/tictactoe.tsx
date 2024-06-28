@@ -47,7 +47,14 @@ const Tictactoe = () => {
       data[num] = "o";
       setCount(count + 1);
     }
+    checkFull();
     checkWin();
+  };
+
+  const checkFull = () => {
+    if (data.find((item) => item === "") === undefined) {
+      draw();
+    }
   };
 
   const checkWin = () => {
@@ -81,6 +88,12 @@ const Tictactoe = () => {
         titleRef.current as HTMLHeadingElement
       ).innerHTML = `Congratulation : <img src=${circle_icon}> Win`;
     }
+  };
+
+  const draw = () => {
+    setLock(true);
+    (titleRef.current as HTMLHeadingElement).innerHTML = `
+      In this match, both sides drew`;
   };
 
   const reset = () => {
