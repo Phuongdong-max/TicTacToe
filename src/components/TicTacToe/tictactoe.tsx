@@ -9,6 +9,8 @@ const Tictactoe = () => {
   const [count, setCount] = useState<number>(0);
   const [lock, setLock] = useState<boolean>(false);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
   const box1 = useRef<HTMLDivElement>(null);
   const box2 = useRef<HTMLDivElement>(null);
   const box3 = useRef<HTMLDivElement>(null);
@@ -108,12 +110,12 @@ const Tictactoe = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" ref={containerRef}>
       <h1 className="title" ref={titleRef}>
         {" "}
         Tic Tac Toe Game In <span>React</span>{" "}
       </h1>
-      <div className="board">
+      <div className={`board ${lock ? "winner" : ""} `}>
         <div className="row1">
           <div
             className="boxes"

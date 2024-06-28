@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Phuongdong-max.github.io/tictactoe",
+  "homepage": "https://Phuongdong-max.github.io/TicTacToe",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

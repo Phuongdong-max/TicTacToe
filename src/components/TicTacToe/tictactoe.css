@@ -37,6 +37,13 @@
   margin: auto;
 }
 
+.board.winner .boxes,
+.board.winner .boxes:hover {
+  cursor: default;
+  background-color: rgb(80, 71, 43);
+  border-color: black;
+}
+
 .boxes {
   display: flex;
   height: 180px;
@@ -49,4 +56,10 @@
 
 .boxes img {
   margin: 50px;
+}
+
+.winner .boxes:hover {
+  background-color: coral;
+  border-color: none;
+  cursor: not-allowed;
 }
