@@ -1,6 +1,6 @@
 # Visit to Site
 
-https://Phuongdong-max.github.io/tictactoe
+https://phuongdong-max.github.io/TicTacToe/
 
 # React + TypeScript + Vite
 
